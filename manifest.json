@@ -1,0 +1,52 @@
+{
+  "manifest_version": 3,
+  "name": "SeaArt Save With Metadata",
+  "version": "1.0.0",
+  "description": "Download the full image from SeaArt artwork pages and embed prompt/model/author/URL/date into XMP (WEBP).",
+  "action": {
+    "default_title": "SeaArt → Download + XMP",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["downloads", "activeTab", "scripting", "storage"],
+  "host_permissions": [
+    "*://*.seaart.ai/*",
+    "*://*.seaart.me/*",
+    "*://resource-static-cdn.seaart.me/*",
+    "*://*.resource-static-cdn.seaart.me/*",
+    "*://image.cdn2.seaart.me/*",
+    "*://*.cdn2.seaart.me/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.seaart.ai/explore/detail/*",
+        "*://seaart.ai/explore/detail/*",
+		    "*://*.seaart.ai/explore/detail/*",
+        "*://seaart.ai/ja/explore/detail/*",
+		    "*://*.seaart.ai/ja/explore/detail/*",
+        "*://seaart.ai/zhCN/explore/detail/*",
+		    "*://*.seaart.ai/zhCN/explore/detail/*",
+        "*://seaart.ai/ko/explore/detail/*",
+		    "*://*.seaart.ai/ko/explore/detail/*",
+        "*://image.seaart.me/*",
+        "*://img-cdn.seaart.ai/*",
+        "*://*.resource-static-cdn.seaart.me/*"
+      ],
+      "js": ["utils.js", "xmp.js", "content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "commands": {
+    "download_seaart_image": {
+      "suggested_key": {
+        "default": "Alt+D",
+        "mac": "Alt+D"
+      },
+      "description": "Download SeaArt image with XMP"
+    }
+  }
+}
