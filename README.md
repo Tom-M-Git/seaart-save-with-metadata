@@ -46,3 +46,7 @@ For **XMP**,
 
 **multiple parentheses** -> **split with spaces** e.g. `(( ))` -> `( ( ) )`
 > Because image viewers like **XnView** for some reasons, automatically removes everything inside double or triple brackets and themselves in XMP after written and saved. So to safely keep it all. Although ExifTool seems to still keep the data, it does so for better safety.
+
+## Installation
+
+Get the source code then "Load unpacked" on the Extension page in your Chrome browser.
