@@ -1,3 +1,5 @@
+This **Chrome extension** embeds **XMP** metadata into images from `seaart.ai` and **change the file name** with relevant info, with one click (only works to work detail pages.)
+
 For **filename**:
 
 Filename `c730a1ed0bda90fa1857eca8392a7db7_high.webp` will become `seaart-official.2025-09-22.seaart-film.seaart-film.2025-11-21.webp`.
