@@ -1,4 +1,6 @@
-This **Chrome extension** embeds **XMP** metadata into images from `seaart.ai` and **change the file name** with relevant info, with one click (only works to work detail pages.)
+This **Chrome extension** embeds **XMP** metadata into images from `seaart.ai` and **change the file names** with relevant info, with one click (only works to work detail pages.)
+
+![screenshot](./screenshot.2025-11-23-13-12-28.002.jpg)
 
 For **filename**:
 
